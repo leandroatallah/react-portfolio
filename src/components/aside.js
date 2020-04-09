@@ -1,5 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import icoclose from '../assets/img/ico-close.png'
+import icoface from '../assets/img/ico-face.png'
+import icoinsta from '../assets/img/ico-insta.png'
+import icolink from '../assets/img/ico-link.png'
+import logo from '../assets/img/logo.png'
+import btnmobile from '../assets/img/btn-mobile.png'
 
 const Aside = styled.aside`
     background-color: #fff;
@@ -9,9 +15,7 @@ export default () => (
     <Aside>
         <div className="flex column sm-row middle between">
             <div className="align-center">
-                <a href="javascript:openAside();" id="branding">
-                    <img src="https://atallah.netlify.com/wp-content/themes/modelo-base/images/logo.png" alt="logo-atallah"/>
-                </a>
+                <img src={logo} alt="logo-atallah"/>
             </div>
             <nav>
                 <ul className="align-center if-open">
@@ -28,23 +32,23 @@ export default () => (
                         <a href="#contato">Contato</a>
                     </li>
                 </ul>
-                <a href="javascript:openAside();" className="btn-mobile">
-                    <img src="https://atallah.netlify.com/wp-content/themes/modelo-base/images/btn-mobile.png" className="if-open-hide" alt="btn-mobile"/>
-                    <img src="https://atallah.netlify.com/wp-content/themes/modelo-base/images/ico-close.png" className="if-open" alt="btn-close"/>
-                </a>
+                <div className="btn-mobile">
+                    <img src={btnmobile} className="if-open-hide" alt="btn-mobile"/>
+                    <img src={icoclose} className="if-open" alt="btn-close"/>
+                </div>
             </nav>
             <div className="aside-foot align-right">
                 <div className="copyrights if-open">
                     <div className="social">
                         <div className="flex center">
                             <a href="https://www.facebook.com/leoatallah" target="_blank" rel="noopener noreferrer">
-                                <img src="https://atallah.netlify.com/wp-content/themes/modelo-base/images/ico-face.png" alt="facebook"/>
+                                <img src={icoface} alt="facebook"/>
                             </a>
                             <a href="https://www.linkedin.com/in/leandroatallah" target="_blank" rel="noopener noreferrer">
-                                <img src="https://atallah.netlify.com/wp-content/themes/modelo-base/images/ico-link.png" alt="linkedin"/>
+                                <img src={icolink} alt="linkedin"/>
                             </a>
                             <a href="https://www.instagram.com/leandroatallah/" target="_blank" rel="noopener noreferrer">
-                                <img src="https://atallah.netlify.com/wp-content/themes/modelo-base/images/ico-insta.png" alt="instagram"/>
+                                <img src={icoinsta} alt="instagram"/>
                             </a>
                         </div>
                     </div>

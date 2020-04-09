@@ -1,49 +1,90 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import Aside from './components/aside'
 import Header from './components/header'
 import Slide from './components/slide'
 import Footer from './components/footer'
-import './assets'
+import './assets/css/style.css'
+import bghome from './assets/img/bg-home.jpg'
+import icofacewhite from './assets/img/ico-face-white.png'
+import icoinstawhite from './assets/img/ico-insta-white.png'
+import icolinkwhite from './assets/img/ico-link-white.png'
+import leandroatallahbateria from './assets/img/leandro-atallah-bateria.jpg'
+
+import projabedathumbmin from './assets/img/proj-abeda-thumb-min.png'
+import projabeda from './assets/img/proj-abeda.jpg'
+import projcaixasthumbmin from './assets/img/proj-caixas-thumb-min.png'
+import projcaixas from './assets/img/proj-caixas.jpg'
+import projcinaplinthumbmin from './assets/img/proj-cinaplin-thumb-min.png'
+import projcinaplin from './assets/img/proj-cinaplin.jpg'
+import projgaivotathumbmin from './assets/img/proj-gaivota-thumb-min.png'
+import projgaivota from './assets/img/proj-gaivota.jpg'
+import projmasterthumbmin from './assets/img/proj-master-thumb-min.png'
+import projmaster from './assets/img/proj-master.jpg'
+import projortigaothumbmin from './assets/img/proj-ortigao-thumb-min.png'
+import projortigao from './assets/img/proj-ortigao.jpg'
+
+
+function jumpSlide(portfolio_list, slideActive, setSlideActive, jump) {
+  let jumpTemp = slideActive + jump
+  
+  if(jumpTemp >= portfolio_list.length) {
+    jumpTemp = 0
+  } else if(jumpTemp < 0) {
+    jumpTemp = portfolio_list.length - 1
+  }
+
+  setSlideActive(jumpTemp)
+}
+
 
 function App() {
   const portfolio_list = [
     {
-      background: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-caixas.jpg',
+      index: 0,
+      background: projcaixas,
       title: 'Caixas Térmicas',
       features: ['Desenvolvimento Front-End', 'Desenvolvimento Wordpress', 'Desenvolvimento de Plugins'],
-      thumb: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-caixas-thumb-min.png'
+      thumb: projcaixasthumbmin
     },
     {
-      background: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-ortigao.jpg',
+      index: 1,
+      background: projortigao,
       title: 'Ortigão',
       features: ['Desenvolvimento Front-End', 'Desenvolvimento Wordpress', 'Blog'],
-      thumb: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-ortigao-thumb-min.png'
+      thumb: projortigaothumbmin
     },
     {
-      background: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-abeda.jpg',
+      index: 2,
+      background: projabeda,
       title: 'Abeda',
       features: ['Desenvolvimento Front-End', 'Desenvolvimento WordPress', 'Desenvolvimento de Plugins', 'Notícias', 'Intranet'],
-      thumb: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-abeda-thumb-min.png'
+      thumb: projabedathumbmin
     },
     {
-      background: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-cinaplin.jpg',
+      index: 3,
+      background: projcinaplin,
       title: 'Cinaplin',
       features: ['Layout', 'Desenvolvimento Front-End', 'Desenvolvimento WordPress', 'Notícias'],
-      thumb: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-cinaplin-thumb-min.png',
+      thumb: projcinaplinthumbmin
     },
     {
-      background: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-gaivota.jpg',
+      index: 4,
+      background: projgaivota,
       title: 'Gaivota',
       features: ['Desenvolvimento Front-End', 'Desenvolvimento Wordpress', 'Desenvolvimento de Plugins'],
-      thumb: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-gaivota-thumb-min.png',
+      thumb: projgaivotathumbmin
     },
     {
-      background: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-master.jpg',
+      index: 5,
+      background: projmaster,
       title: 'Master Trade',
       features: ['Desenvolvimento Front-End', 'Desenvolvimento WordPress'],
-      thumb: 'https://atallah.netlify.com/wp-content/themes/modelo-base/images/proj-master-thumb-min.png',
+      thumb: projmasterthumbmin
     }
   ]
+
+  const [slideActive, setSlideActive] = useState(0)
 
   return (
     <div className="App">
@@ -52,7 +93,8 @@ function App() {
       <Header/>
 
       <main>
-        <div className="section home fp-section fp-table active fp-completely" style={{backgroundImage: "url(https://atallah.netlify.com/wp-content/themes/modelo-base/images/bg-home.jpg)"}} data-anchor="sobre">
+
+        <div className="section home fp-section fp-table active fp-completely" style={{backgroundImage: `url(${bghome})`}} data-anchor="sobre">
           <div className="section-center">
             <h2 className="align-center">Apaixonado por <br/>Front-End e Wordpress</h2>
             <div className="btn-double flex sm-column center sm-align-center">
@@ -68,11 +110,11 @@ function App() {
             <div className="container-fluid">
               <div className="row">
                 <div className="col-md-offset-1 col-md-4 align-center sm-hide">
-                  <img src="https://atallah.netlify.com/wp-content/themes/modelo-base/images/leandro-atallah-bateria.jpg" alt="leandro-atallah-bateria"/>
+                  <img src={leandroatallahbateria} alt="leandro-atallah-bateria"/>
                 </div>
                 <div className="col-md-4">
                   <h2 className="line">Sobre</h2>
-                  <p>Olá, meu nome é <a>Leandro Atallah</a>. <br/>Sou carioca, casado e tenho 28 anos.</p>
+                  <p>Olá, meu nome é <strong>Leandro Atallah</strong>. <br/>Sou carioca, casado e tenho 28 anos.</p>
                   <p>Trabalho como Desenvolvedor Front-end e Wordpress a mais de 4 anos. Sou graduado em Análise e Desenvolvimento de Sistemas na Faculdade São José.</p>
                   <p>Atuo em meus projetos com bastante foco fazendo uma entrega rápida e de qualidade. Atendo desde pequenos negócios a grandes agências digitais.</p>
                   <p>
@@ -88,19 +130,18 @@ function App() {
           <h2 className="proj-title">Projetos</h2>
           <a href="#contato" className="calltoaction">Entre em contato</a>
           <div className="fp-slides">
-            <div className="fp-slidesContainer" style={{width: '600%', transition: 'all 700ms ease 0s', transform: 'translate3d(0px, 0px, 0px)'}}>
+            <div className="fp-slidesContainer" style={{width: `${portfolio_list.length * 100}%`, transition: 'all 700ms ease 0s', left: `-${slideActive * 100}%`}}>
 
             {
-              portfolio_list.map((props, index) => (
-                <Slide {...props} key={{ index }} />
+              portfolio_list.map(props => (
+                <Slide index={props.index} {...props} key={props.index} />
               ))
             }
-
           </div>
         </div>
 
-        <div className="fp-controlArrow fp-prev"></div>
-        <div className="fp-controlArrow fp-next"></div>
+        <button type="button" onClick={() => jumpSlide(portfolio_list, slideActive, setSlideActive, -1)} className="fp-controlArrow fp-prev"></button>
+        <button type="button" onClick={() => jumpSlide(portfolio_list, slideActive, setSlideActive, +1)} className="fp-controlArrow fp-next"></button>
 
         </div>
 
@@ -127,13 +168,13 @@ function App() {
             </div>
             <div className="calltoaction">
               <a href="https://www.facebook.com/leoatallah" target="_blank" rel="noopener noreferrer">
-                <img src="https://atallah.netlify.com/wp-content/themes/modelo-base/images/ico-face-white.png" alt="facebook"/>
+                <img src={icofacewhite} alt="facebook"/>
               </a>
               <a href="https://www.linkedin.com/in/leandroatallah" target="_blank" rel="noopener noreferrer">
-                <img src="https://atallah.netlify.com/wp-content/themes/modelo-base/images/ico-link-white.png" alt="linkedin"/>
+                <img src={icolinkwhite} alt="linkedin"/>
               </a>
               <a href="https://www.instagram.com/leandroatallah/" target="_blank" rel="noopener noreferrer">
-                <img src="https://atallah.netlify.com/wp-content/themes/modelo-base/images/ico-insta-white.png" alt="instagram"/>
+                <img src={icoinstawhite} alt="instagram"/>
               </a>
             </div>
           </div>
