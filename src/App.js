@@ -154,13 +154,13 @@ function App() {
                     <div className="contato-inner">
                       <h2 className="line">Entre em contato</h2>
                       <h3>Me ligue ou mande um Whatsapp</h3>
-                      <h4><a href="https://api.whatsapp.com/send?phone=553298065755" target="_blank rel="noopener noreferrer>+55 (32) 98506-5755</a></h4>
+                      <h4><a href="https://api.whatsapp.com/send?phone=5532985065755">+55 (32) 98506-5755</a></h4>
                     </div>
                   </div>
                   <div className="col-md-5 col-xs-12 col-sm-12">
                     <div className="contato-inner">
                       <h3>Ou me envie um e-mail</h3>
-                      <h4><a href="mailto:leandroatallah@gmail.com" target="_blank" rel="noopener noreferrer">leandroatallah@gmail.com</a></h4>
+                      <h4><a href="mailto:leandroatallah@gmail.com">leandroatallah@gmail.com</a></h4>
                     </div>
                   </div>
                 </div>
