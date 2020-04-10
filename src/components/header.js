@@ -11,9 +11,9 @@ export default () => (
     <Header>
         <h1>Leandro Atallah</h1>
         <h2>FRONT-END &amp; WORDPRESS DEVELOPER</h2>
-        <div className="mobile-btn">
+        {/* <div className="mobile-btn">
             <img src={btnmobile} className="if-open-hide" alt="btn-mobile"/>
             <img src={icocloseblack} className="if-open" alt="btn-close"/>
-        </div>
+        </div> */}
     </Header>
 )

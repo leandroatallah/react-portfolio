@@ -94,7 +94,7 @@ function App() {
 
       <main>
 
-        <div className="section home fp-section fp-table active fp-completely" style={{backgroundImage: `url(${bghome})`}} data-anchor="sobre">
+        <div className="section home fp-section fp-table active fp-completely" id="home" style={{backgroundImage: `url(${bghome})`}} data-anchor="sobre">
           <div className="section-center">
             <h2 className="align-center">Apaixonado por <br/>Front-End e Wordpress</h2>
             <div className="btn-double flex sm-column center sm-align-center">
@@ -108,13 +108,13 @@ function App() {
         <div className="section sobre fp-section fp-table" id="sobre" data-anchor="projetos" style={{height: '100vh'}}>
           <div className="section-center">
             <div className="container-fluid">
-              <div className="row">
-                <div className="col-md-offset-1 col-md-4 align-center sm-hide">
+              <div className="row align-items-center">
+                <div className="col-md-offset-1 col-md-3 align-center sm-hide">
                   <img src={leandroatallahbateria} alt="leandro-atallah-bateria"/>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-5">
                   <h2 className="line">Sobre</h2>
-                  <p>Olá, meu nome é <strong>Leandro Atallah</strong>. <br/>Sou carioca, casado e tenho 28 anos.</p>
+                  <p>Olá, meu nome é <strong>Leandro Atallah</strong>. Sou carioca, casado e tenho 28 anos.</p>
                   <p>Trabalho como Desenvolvedor Front-end e Wordpress a mais de 4 anos. Sou graduado em Análise e Desenvolvimento de Sistemas na Faculdade São José.</p>
                   <p>Atuo em meus projetos com bastante foco fazendo uma entrega rápida e de qualidade. Atendo desde pequenos negócios a grandes agências digitais.</p>
                   <p>
@@ -154,13 +154,13 @@ function App() {
                     <div className="contato-inner">
                       <h2 className="line">Entre em contato</h2>
                       <h3>Me ligue ou mande um Whatsapp</h3>
-                      <h4>+55 (32) 98506-5755</h4>
+                      <h4><a href="https://api.whatsapp.com/send?phone=553298065755" target="_blank rel="noopener noreferrer>+55 (32) 98506-5755</a></h4>
                     </div>
                   </div>
                   <div className="col-md-5 col-xs-12 col-sm-12">
                     <div className="contato-inner">
                       <h3>Ou me envie um e-mail</h3>
-                      <h4>leandroatallah@gmail.com</h4>
+                      <h4><a href="mailto:leandroatallah@gmail.com" target="_blank" rel="noopener noreferrer">leandroatallah@gmail.com</a></h4>
                     </div>
                   </div>
                 </div>
