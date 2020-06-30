@@ -621,7 +621,7 @@ aside.open .btn-mobile {position: fixed;top: 26px;left: 300px;}
 aside .social {margin-bottom: 20px;}
 aside .social a {margin: 0 10px;}
 aside .social a img {width: 20px;}
-header {position: fixed;top: 0;left: 0;color: #fff;text-transform: uppercase;margin: 26px 0 0 35px;z-index: 1000;}
+header {position: fixed;top: 0;left: 0;color: #fff;text-transform: uppercase;margin: 26px 0 0 35px;z-index: 1000;display: none;}
 header h1 {font-size: 34px;line-height: 1;margin: 0;}
 header h2 {font-size: 16px;line-height: 1;letter-spacing: .4px;margin: 5px 0;}
 header .mobile-btn {display: none;position: fixed;top: 20px;right: 15px;}
@@ -631,8 +631,9 @@ main {padding-left: 0;}
 .section .calltoaction {position: absolute;bottom: 26px;left: 26px;font-size: 14px;color: #fff;text-transform: uppercase;z-index: 10;}
 .section .calltoaction a {margin-right: 5px;display: inline-block;}
 .section .slide {background-position: center;background-repeat: no-repeat;background-size: cover;}
-.section h2 {font-size: 48px;color: #fff;line-height: 1.2;font-weight: 900;letter-spacing: .5px;margin: 0;position: relative;}
-.section h2.line {padding-bottom: 20px;margin-bottom: 20px;}
+.section h2 {font-size: 28px;color: #fff;line-height: 2;font-weight: 400;letter-spacing: 3px;margin: 0;position: relative;}
+.section h2 strong {font-size: 46px;font-weight: 900;letter-spacing: .5px;text-transform: uppercase;}
+.section h2.line {padding-bottom: 20px;margin-bottom: 20px;font-size: 48px;color: #fff; line-height: 1.2; font-weight: 900; letter-spacing: .5px; margin: 0; position: relative;}
 .section h2.line:after {content: "";position: absolute;bottom: 0;left: 0;display: inline-block;width: 60px;height: 3px;background-color: #cd3f31;}
 .section h3 {font-size: 28px;color: #fff;line-height: 1.5;font-weight: 700;letter-spacing: .25px;margin: 40px 0 20px;}
 .section h4 {font-size: 34px;color: #cd3f31;line-height: 1.5;font-weight: 900;letter-spacing: 1px;margin: 20px 0;border-top: 1px solid #444;padding-top: 10px;}

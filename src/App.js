@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Aside from './components/aside'
 import Header from './components/header'
@@ -39,6 +39,7 @@ function jumpSlide(portfolio_list, slideActive, setSlideActive, jump) {
 
 
 function App() {
+
   const portfolio_list = [
     {
       index: 0,
@@ -85,18 +86,30 @@ function App() {
   ]
 
   const [slideActive, setSlideActive] = useState(0)
+  // const [showHeaderLogo, setShowHeaderLogo] = useState(false)
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setShowHeaderLogo(false)
+
+  //     if(window.scrollY > 500) {
+  //       setShowHeaderLogo(true)
+  //     }
+  //   }
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
+  // })
 
   return (
     <div className="App">
       <Aside />
 
-      <Header/>
+      <Header />
 
       <main>
 
         <div className="section home fp-section fp-table active fp-completely" id="home" style={{backgroundImage: `url(${bghome})`}} data-anchor="sobre">
           <div className="section-center">
-            <h2 className="align-center">Apaixonado por <br/>Front-End e Wordpress</h2>
+            <h2 className="align-center"><strong>Leandro <span>Atallah</span></strong> <br/>Desenvolvedor Front-End</h2>
             <div className="btn-double flex sm-column center sm-align-center">
               <a href="#contato" className="btn btn-orange hover-effect">Entre em contato</a>
               <a href="#projetos" className="btn btn-transparent hover-effect">Projetos</a>
