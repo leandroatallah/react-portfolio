@@ -127,11 +127,11 @@ function App() {
                 </div>
                 <div className="col-md-5">
                   <h2 className="line">Sobre</h2>
-                  <p>Olá, meu nome é <strong>Leandro Atallah</strong>. Sou carioca, casado e tenho 28 anos.</p>
-                  <p>Trabalho como Desenvolvedor Front-end e Wordpress a mais de 4 anos. Sou graduado em Análise e Desenvolvimento de Sistemas na Faculdade São José.</p>
-                  <p>Atuo em meus projetos com bastante foco fazendo uma entrega rápida e de qualidade. Atendo desde pequenos negócios a grandes agências digitais.</p>
-                  <p>
-                  <a href="#contato">Entre em contato</a> e faça um orçamento.</p>
+                  <p><strong>Desenvolvedor Front-End</strong> há 5 anos, graduado em <strong>Análise e Desenvolvimento de Sistemas</strong> pelo Centro Universitário São José.</p>
+                  <p>Alta fidelidade ao design das interfaces com agilidade e excelência.</p>
+                  <p>Ampla experiência em WordPress e também ReactJS.</p>
+                  <p>Conhecimentos em Sass, MongoDB, MySql, Gulp e desenvolvimento ágil.</p>
+                  <p><a href="#contato">Entre em contato</a> e faça um orçamento.</p>
                 </div>
               </div>
             </div>
